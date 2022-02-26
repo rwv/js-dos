@@ -101,9 +101,9 @@ const bundle = fs.readFileSync("digger.jsdos");
 emulators
     .dosDirect(bundle)
     .then((ci) => {
-        let rgba = new Uint8Array(0);
+        let rgb = new Uint8Array(0);
         ci.events().onFrame((frame) => {
-            rgba = frame;
+            rgb = frame;
         });
 
         // capture the screen after 3 sec
